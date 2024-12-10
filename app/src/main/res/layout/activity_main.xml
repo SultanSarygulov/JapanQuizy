@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android/tools"
+    xmlns:tools2="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -25,18 +26,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="0"
+        android:text="Score: 0"
         android:textColor="@color/black"
-        android:textSize="32sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- First Row, First Button -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button1"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
         android:text="1"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
@@ -44,25 +44,23 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/letter"
+        app:layout_constraintTop_toBottomOf="@+id/nextButton"
         app:layout_constraintVertical_chainStyle="spread" />
 
-    <!-- First Row, Second Button -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
         android:text="2"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@id/letter" />
+        app:layout_constraintTop_toBottomOf="@+id/nextButton" />
 
-    <!-- Second Row, First Button -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3"
         android:layout_width="130dp"
         android:layout_height="130dp"
@@ -76,8 +74,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_chainStyle="spread" />
 
-    <!-- Second Row, Second Button -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4"
         android:layout_width="130dp"
         android:layout_height="130dp"
@@ -88,5 +85,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@+id/button3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dictionaryButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letter"
+        app:srcCompat="@drawable/ic_right" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
